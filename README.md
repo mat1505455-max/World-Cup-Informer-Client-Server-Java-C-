@@ -29,7 +29,6 @@ mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args=
 
 # Run Reactor server
 mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="<port> reactor"
-
 💻 Client (C++ / Make)
 Build and run the client executable:
 
@@ -39,8 +38,8 @@ make
 
 # Run the client
 ./bin/StompWCIClient
-
 📂 Project Structure
+Plaintext
 ├── server/          # Java backend (TPC/Reactor servers, STOMP protocol, Maven config)
 ├── client/          # C++ frontend client (Multi-threaded I/O, event parsing, Makefile)
 └── README.md
