@@ -19,27 +19,32 @@ A community-led real-time update subscription service implementing the **STOMP 1
 ## 🛠️ Build & Run Instructions
 
 ### 🖥️ Server (Java / Maven)
+
 Compile and run the server supporting either TPC or Reactor modes:
-```bash
-# Compile using Maven
-mvn compile
 
-# Run Thread-Per-Client server
-mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="<port> tpc"
+    # Compile using Maven
+    mvn compile
 
-# Run Reactor server
-mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="<port> reactor"
-💻 Client (C++ / Make)
+    # Run Thread-Per-Client server
+    mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="<port> tpc"
+
+    # Run Reactor server
+    mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="<port> reactor"
+
+### 💻 Client (C++ / Make)
+
 Build and run the client executable:
 
-Bash
-# Build using Makefile
-make
+    # Build using Makefile
+    make
 
-# Run the client
-./bin/StompWCIClient
-📂 Project Structure
-Plaintext
-├── server/          # Java backend (TPC/Reactor servers, STOMP protocol, Maven config)
-├── client/          # C++ frontend client (Multi-threaded I/O, event parsing, Makefile)
-└── README.md
+    # Run the client
+    ./bin/StompWCIClient
+
+---
+
+## 📂 Project Structure
+
+    ├── server/          # Java backend (TPC/Reactor servers, STOMP protocol, Maven config)
+    ├── client/          # C++ frontend client (Multi-threaded I/O, event parsing, Makefile)
+    └── README.md
